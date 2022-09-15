@@ -12,38 +12,7 @@ local pass = getrenv()._G.Pass
 local player = game.Players.LocalPlayer
 local character = player.Character
 local uis = game:GetService("UserInputService")
-local function spamk()
 
-	local target = player.Backpack:WaitForChild("Main").LockOnScript.LockOn.Value
-
-	local A_1 = pass
-	local A_2 = target
-	local A_3 = {
-		["HitTime"] = 1,
-		["Type"] = "Knockback", 
-		["HitEffect"] = "KnifeHitEffect",
-		["HurtAnimation"] = game:GetService("ReplicatedStorage").Animations.HurtAnimations.Hurt3,  
-		["Sound"] = game:GetService("ReplicatedStorage").Sounds.KnifeHit,
-		["CombatInv"] = true,
-		["Velocity"] = Vector3.new(0, -1, 0),
-		["Damage"] = "NaN"
-	}
-	local Event = game:GetService("ReplicatedStorage").Remotes.Damage
-	Event:InvokeServer(A_1, A_2, A_3)
-
-end
-
-uis.InputBegan:Connect(function(inputs, event)
-	if event == true then return end
-
-	if inputs.KeyCode == Enum.KeyCode.B then
-
-		spamk()
-
-
-	end
-
-end)
 wait(3)
 local netboost = Vector3.new(-30, 0, 0) --jitter (set to false to disable)
 local newanimate = true --disable the animate script and enable after reanimation
