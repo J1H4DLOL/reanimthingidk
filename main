@@ -403,5 +403,5 @@ spawn(function()
 	end
 	sg:SetCore("ResetButtonCallback", true)
 end)
-wait(3)
-loadstring(game:HttpGet("https://paste.ee/r/meMmr",true))()
+--wait(3)
+--loadstring(game:HttpGet("https://paste.ee/r/meMmr",true))()
